@@ -323,10 +323,7 @@ static void server_recv_cb (EV_P_ ev_io *w, int revents)
 
         offset += 2;
 
-        if (verbose)
-        {
-            LOGD("connect to: %s:%s", host, port);
-        }
+        LOGD("connect to: %s:%s", host, port);
 
         struct addrinfo hints;
         asyncns_query_t *query;
